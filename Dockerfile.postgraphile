@@ -13,4 +13,15 @@ ENV NODE_ENV production
 EXPOSE 5000
 
 # Start PostGraphile
-CMD ["sh", "-c", "postgraphile --connection $DATABASE_URL --port 5000 --schema public --watch --enhance-graphiql --allow-explain --enable-query-batching --cors --graphiql /graphiql --retry-on-init-fail"]
+CMD postgraphile \
+    --connection "$DATABASE_URL" \
+    --port 5000 \
+    --schema public \
+    --watch \
+    --enhance-graphiql \
+    --allow-explain \
+    --enable-query-batching \
+    --cors \
+    --host 0.0.0.0 \
+    --graphiql "/graphiql" \
+    --retry-on-init-fail
