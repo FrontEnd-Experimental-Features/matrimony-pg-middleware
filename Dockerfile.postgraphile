@@ -29,4 +29,6 @@ CMD postgraphile \
     --simple-collections only \
     --no-ignore-rbac \
     --legacy-relations omit \
+    --append-plugins @graphile-contrib/pg-simplify-inflector \
+    --export-schema-graphql schema.graphql
     --retry-on-init-fail
