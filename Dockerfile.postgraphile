@@ -26,5 +26,6 @@ CMD postgraphile \
     --graphiql "/graphiql" \
     --jwt-secret "$JWT_SECRET" \
     --jwt-token-identifier "public.jwt_token" \
-    --default-role "anonymous" \
+    --default-role "matrimony_user" \
+    --set-role-from-jwt \
     --retry-on-init-fail
