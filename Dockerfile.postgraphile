@@ -24,4 +24,7 @@ CMD postgraphile \
     --cors \
     --host 0.0.0.0 \
     --graphiql "/graphiql" \
+    --jwt-secret "$JWT_SECRET" \
+    --jwt-token-identifier "public.jwt_token" \
+    --default-role "anonymous" \
     --retry-on-init-fail
