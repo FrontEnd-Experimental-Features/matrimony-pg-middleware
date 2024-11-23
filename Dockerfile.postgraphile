@@ -26,5 +26,4 @@ CMD postgraphile \
     --graphiql "/graphiql" \
     --jwt-token-identifier "public.jwt_token" \
     --default-role "matrimony_user" \
-    --set-role-from-jwt \
     --retry-on-init-fail
