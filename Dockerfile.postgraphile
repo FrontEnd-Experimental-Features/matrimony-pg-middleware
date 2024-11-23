@@ -26,7 +26,7 @@ CMD postgraphile \
     --graphiql "/graphiql" \
     --default-role "matrimony_user" \
     --secret "$JWT_SECRET" \
-    --retry-on-init-fail
     --simple-collections only \
     --no-ignore-rbac \
-    --legacy-relations omit
+    --legacy-relations omit \
+    --retry-on-init-fail
