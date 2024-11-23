@@ -24,7 +24,6 @@ CMD postgraphile \
     --cors \
     --host 0.0.0.0 \
     --graphiql "/graphiql" \
-    --jwt-secret "$JWT_SECRET" \
     --jwt-token-identifier "public.jwt_token" \
     --default-role "matrimony_user" \
     --set-role-from-jwt \
