@@ -1,7 +1,7 @@
 FROM node:18-alpine
 
-# Install PostGraphile globally
-RUN npm install -g postgraphile@4.13.0 @graphile/pg-pubsub
+# Install PostGraphile and plugins globally
+RUN npm install -g postgraphile@4.13.0 @graphile/pg-pubsub @graphile-contrib/pg-simplify-inflector
 
 # Create app directory
 WORKDIR /usr/src/app
