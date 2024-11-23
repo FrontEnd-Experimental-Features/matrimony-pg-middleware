@@ -21,16 +21,19 @@ CREATE TYPE public.authenticate_input_record AS (
     email text,
     password text
 );
+COMMENT ON TYPE public.authenticate_input_record IS E'@name LoginCredentials';
 
 CREATE TYPE public.authenticate_input AS (
     input public.authenticate_input_record
 );
+COMMENT ON TYPE public.authenticate_input IS E'@name LoginInput';
 
 -- Create result type
 CREATE TYPE public.auth_result AS (
     auth_result json,
     client_mutation_id text
 );
+COMMENT ON TYPE public.auth_result IS E'@name LoginPayload';
 
 -- Create JWT schema
 CREATE SCHEMA IF NOT EXISTS jwt;
