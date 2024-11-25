@@ -24,11 +24,10 @@ CMD postgraphile \
     --cors \
     --host 0.0.0.0 \
     --graphiql "/graphiql" \
-    --default-role "matrimony_user" \
     --secret "$JWT_SECRET" \
     --simple-collections only \
     --no-ignore-rbac \
     --legacy-relations omit \
     --append-plugins @graphile-contrib/pg-simplify-inflector \
     --export-schema-graphql schema.graphql \
-    --retry-on-init-fail
+    --retry-on-init-fail    
